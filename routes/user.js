@@ -69,7 +69,7 @@ router.post("/signup", async (req, res) => {
     });
 
     // this is sent to the user via mail when they submit the email in forgor page
-    const link = `http://localhost:7005/user/account-activate/${user._id}/${token1}`;
+    const link = `https://url-shortener-backend-ab7t.onrender.com/user/account-activate/${user._id}/${token1}`;
 
     // This is the part to sent and email to user
     var transporter = nodemailer.createTransport({
@@ -121,7 +121,7 @@ router.post("/forgot-password", async (req, res) => {
     });
 
     // this is sent to the user via mail when they submit the email in forgor page
-    const link = `http://localhost:7005/user/reset-password/${user._id}/${token}`;
+    const link = `https://url-shortener-backend-ab7t.onrender.com/user/reset-password/${user._id}/${token}`;
 
     // This is the part to sent and email to user
     var transporter = nodemailer.createTransport({
