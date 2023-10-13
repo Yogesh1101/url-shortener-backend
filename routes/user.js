@@ -65,7 +65,7 @@ router.post("/signup", async (req, res) => {
     // generating a random string consist of some token and secret key
     const secret = process.env.SECRET_KEY + user.password;
     const token1 = jwt.sign({ email: user.email, id: user._id }, secret, {
-      expiresIn: "5m",
+      expiresIn: "10m",
     });
 
     // this is sent to the user via mail when they submit the email in forgor page
