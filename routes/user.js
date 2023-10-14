@@ -6,6 +6,7 @@ import { User, generateToken } from "../models/user.js";
 import jwt from "jsonwebtoken";
 import nodemailer from "nodemailer";
 
+
 // express router is initialized to router variable and used
 const router = express.Router();
 
@@ -94,12 +95,10 @@ router.post("/signup", async (req, res) => {
         console.log("Email sent: " + info.response);
       }
     });
-    res
-      .status(201)
-      .json({
-        message: "Account Activation Link is send to your mail.",
-        token,
-      });
+    res.status(201).json({
+      message: "Account Activation Link is send to your mail.",
+      token,
+    });
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: "Internal Server Error." });
@@ -237,5 +236,7 @@ router.post("/reset-password/:id/:token", async (req, res) => {
     console.log(error);
   }
 });
+
+
 
 export const userRouter = router;
