@@ -27,7 +27,7 @@ dataBaseConnection();
 
 // routes
 app.use("/user", userRouter);
-app.use("/", isAuthenticated, urlRouter)
+app.use("/", urlRouter)
 
 // server connection
 app.listen(PORT, () => console.log(`Server started at localhost: ${PORT}`));
