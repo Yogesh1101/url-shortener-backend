@@ -6,3 +6,7 @@ export function getUserByEmail(request) {
     email: request.body.email,
   });
 }
+
+export function getUserById(userID) {
+  return User.findById(userID).select("_id username email");
+}
