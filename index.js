@@ -4,7 +4,6 @@ import dotenv from "dotenv";
 import { dataBaseConnection } from "./db.js";
 import { userRouter } from "./routes/user.js";
 import { urlRouter } from "./routes/url.js";
-import { isAuthenticated } from "./controllers/auth.js";
 
 // This is main file and runs first
 
